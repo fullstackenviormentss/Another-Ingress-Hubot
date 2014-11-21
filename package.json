@@ -1,6 +1,6 @@
 {
   "name": "xm-bot",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "author": "Christopher Roussel <christopher@impleri.net>",
   "description": "A simple helpful robot.",
@@ -14,9 +14,9 @@
     "hubot-help": "~0.1",
     "hubot-heroku-keepalive": "~0.0",
     "hubot-humanity": "^0.1.3",
+    "hubot-ingress": "hubot-scripts/hubot-ingress",
     "hubot-maps": "~0.0",
     "hubot-pugme": "~0.1",
-    "hubot-recharge": "~0.0",
     "hubot-redis-brain": "~0.0",
     "hubot-scripts": "~2.5",
     "hubot-slack": "~2.2",
