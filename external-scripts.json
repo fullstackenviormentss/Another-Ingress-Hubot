@@ -8,6 +8,7 @@
   "hubot-google-images",
   "hubot-maps",
   "hubot-pugme",
+  "hubot-slack-invite-request",
   "hubot-suggest",
   "hubot-voting",
   "hubot-youtube"
