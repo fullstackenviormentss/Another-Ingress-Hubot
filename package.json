@@ -15,7 +15,7 @@
     "hubot-help": "*",
     "hubot-heroku-keepalive": "*",
     "hubot-humanity": "*",
-    "hubot-ingress": "*",
+    "hubot-ingress": "~0.13",
     "hubot-maps": "*",
     "hubot-pugme": "*",
     "hubot-redis-brain": "*",
