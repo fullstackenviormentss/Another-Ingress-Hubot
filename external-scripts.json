@@ -1,5 +1,6 @@
 [
   "hubot-auth",
+  "hubot-business-cat",
   "hubot-diagnostics",
   "hubot-dogeme",
   "hubot-help",
@@ -8,8 +9,9 @@
   "hubot-google-images",
   "hubot-maps",
   "hubot-pugme",
-  "hubot-slack-invite-request",
+  "hubot-redis-brain",
   "hubot-suggest",
+  "hubot-thesimpsons",
   "hubot-voting",
   "hubot-youtube"
 ]
