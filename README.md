@@ -53,15 +53,19 @@ C. Username and password for the account.
     - At a minumum, you must add Redis. `redistogo:nano` is free and quite enough for Hubot. You should get a URL to use for the Redis instance.
     - Feel free to add a logging addon (`papertrail`, `logentries:tryit`)
 4. Configure the necessary environment variables: `heroku config:set [key]=[value]`.
+    - HEROKU_URL=https://[app-name].herokuapp.com
     - HUBOT_CYCLE_TZ_NAME (from hubot-ingress). America/Chicago is US/Central.
     - HUBOT_MEMEGENERATOR_PASSWORD (from above)
     - HUBOT_MEMEGENERATOR_USERNAME (from above)
     - HUBOT_MEMEGEN_PASSWORD (from above)
     - HUBOT_MEMEGEN_USERNAME (from above)
     - HUBOT_SLACK_TOKEN (token from above)
+    - HUBOT_AUTH_ADMIN (comma-separated list of user ids that get robot taming powers*)
     - REDISTOGO_URL (provided from registring the addon)
 5. Restart your robot for good measure: `heroku ps:restart`
 
+
+* To get the user ids for HUBOT_AUTH_ADMIN, go to https://api.slack.com/methods/users.list/test (you may need to generate an API token for your account) and get the list of users. Search for a user by username and get the `"id"` field about the username.
 
 ### Test in Slack
 
