@@ -7,7 +7,6 @@
   "dependencies": {
     "hubot": "~2.12",
     "hubot-auth": "*",
-    "hubot-business-cat": "*",
     "hubot-diagnostics": "*",
     "hubot-dogeme": "*",
     "hubot-google-images": "*",
