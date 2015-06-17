@@ -1,6 +1,6 @@
 {
   "name": "another-ingress-hubot",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "author": "Christopher Roussel <christopher@impleri.net>",
   "description": "A simple helpful robot.",
@@ -14,7 +14,8 @@
     "hubot-help": "*",
     "hubot-heroku-keepalive": "*",
     "hubot-humanity": "*",
-    "hubot-ingress": "~0.13",
+    "hubot-ingress": "*",
+    "hubot-invite-slack": "*",
     "hubot-maps": "*",
     "hubot-pugme": "*",
     "hubot-redis-brain": "*",
