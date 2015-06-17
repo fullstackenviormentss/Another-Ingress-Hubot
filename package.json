@@ -15,7 +15,7 @@
     "hubot-heroku-keepalive": "*",
     "hubot-humanity": "*",
     "hubot-ingress": "*",
-    "hubot-invite-slack": "*",
+    "hubot-invite-slack": "^0.1.5",
     "hubot-maps": "*",
     "hubot-pugme": "*",
     "hubot-redis-brain": "*",
