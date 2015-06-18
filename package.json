@@ -1,6 +1,6 @@
 {
   "name": "another-ingress-hubot",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "private": true,
   "author": "Christopher Roussel <christopher@impleri.net>",
   "description": "A simple helpful robot.",
