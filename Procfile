@@ -1,1 +1,1 @@
-web: ./node_modules/.bin/forever bin/hubot -a slack
+web: ./node_modules/.bin/forever start bin/hubot -a slack
