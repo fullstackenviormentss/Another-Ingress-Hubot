@@ -1,1 +1,1 @@
-web:  node_modules/.bin/pm2 start process.json
+web:  bin/hubot -a slack
