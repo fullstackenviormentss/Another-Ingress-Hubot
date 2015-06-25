@@ -1,0 +1,10 @@
+{
+  "apps" : [{
+    "name"        : "hubot",
+    "script"      : "node_modules/.bin/hubot",
+    "args"        : ["-a", "slack"],
+    "watch"       : true,
+    "exec_interpreter" : "coffee",
+    "autorestart"      : true,
+  }]
+}
