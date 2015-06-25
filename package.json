@@ -5,6 +5,7 @@
   "author": "Christopher Roussel <christopher@impleri.net>",
   "description": "A simple helpful robot.",
   "dependencies": {
+    "forever": "*",
     "hubot": "~2.12",
     "hubot-auth": "*",
     "hubot-diagnostics": "*",
