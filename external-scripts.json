@@ -1,5 +1,6 @@
 [
   "hubot-auth",
+  "hubot-brain-inspect",
   "hubot-diagnostics",
   "hubot-dogeme",
   "hubot-help",
