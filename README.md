@@ -1,23 +1,9 @@
 # Hubot for Ingress
 
-This is a clone of a Hubot installed on Slack. Feel free to fork/clone for your own group's usage. It runs on an Heroku instance with Redis.
+This is a clone of a Hubot installed on Slack. Feel free to fork/clone for your own group's usage. We run ours on a [https://github.com/progrium/dokku](dokku) instance.
 
 
 ## Setup
-
-### Hosting Platform
-
-1. Sign up for an account on Heroku: https://signup.heroku.com
-    - Pro-tip: Do this twice -- once with an email address for your local group and once with your personal email. Give the group's login details to others within the group.
-    - You'll want to setup the app with the group's account, but then give your personal email access. That way, if you fall off the grid, rage quit the game, etc, someone in the group can take over without needing to hunt you down.
-2. Create a new app. Name isn't necessary, but helpful in identifying the app in a list.
-3. Heroku will give you instructions on installing the Heroku toolbelt, connecting your local git repo.
-4. Under the "Access" tab, give your personal account access.
-
-#### Things to note for later:
-
-A. The git repository endpoint commands. Will look like `heroku git:remote -a [app-name]`. You'll need the app-name portion.
-
 
 ### Slack Integration
 
@@ -32,45 +18,27 @@ A. The git repository endpoint commands. Will look like `heroku git:remote -a [a
 B. The API token
 
 
-### Memegen Integration
-
-1. Visit http://memegenerator.net/
-2. Sign up for an account (access via login popup).
-
-#### Things to note for later:
-
-C. Username and password for the account.
-
-
 ### Hubot Codebase
 
 1. Clone this repo to your local machine: `git clone git@github.com:impleri/another-ingress-hubot.git`
-2. Log into Heroku via the CLI: `heroku login`
-2. Add the remote heroku repo for syncing: `heroku git:remote -a [app-name]` (from above)
-3. Push the code to the heroku remote: `git push heroku master`
-4. Provision the web stack: `heroku ps scale web=1`
-5. Provision addons: `heroku addons:add [name]`
-    - At a minumum, you must add Redis. `redistogo:nano` is free and quite enough for Hubot. You should get a URL to use for the Redis instance.
-    - Feel free to add a logging addon (`papertrail`, `logentries:tryit`)
-4. Configure the necessary environment variables: `heroku config:set [key]=[value]`.
-    - HEROKU_URL=https://[app-name].herokuapp.com
+2. Deploy it to your server (depends on setup)
+3. Configure the necessary environment variables:
+    - HEROKU_URL=https://[app-name].[domain-name.com]
     - HUBOT_CYCLE_TZ_NAME (from hubot-ingress). America/Chicago is US/Central.
-    - HUBOT_MEMEGENERATOR_PASSWORD (from above)
-    - HUBOT_MEMEGENERATOR_USERNAME (from above)
-    - HUBOT_MEMEGEN_PASSWORD (from above)
-    - HUBOT_MEMEGEN_USERNAME (from above)
     - HUBOT_SLACK_TOKEN (token from above)
-    - HUBOT_AUTH_ADMIN (comma-separated list of user ids that get robot taming powers*)
-    - REDISTOGO_URL (provided from registring the addon)
+    - HUBOT_SLACK_INVITE_TOKEN (from hubot-invite-slack)
+    - HUBOT_YOUTUBE_API_KEY (from hubot-youtube)
+    - HUBOT_AUTH_ADMIN (from hubot-auth*)
+    - REDIS_URL (from hubot-redis-brain)
 5. Restart your robot for good measure: `heroku ps:restart`
 
 
-* To get the user ids for HUBOT_AUTH_ADMIN, go to https://api.slack.com/methods/users.list/test (you may need to generate an API token for your account) and get the list of users. Search for a user by username and get the `"id"` field about the username.
+* This is a comma-separated list of user ids that get robot taming powers. To get the user ids for HUBOT_AUTH_ADMIN, go to https://api.slack.com/methods/users.list/test (you may need to generate an API token for your account) and get the list of users. Search for a user by username and get the `"id"` field about the username.
+
 
 ### Test in Slack
 
 1. Invite your tame robot to a chat room. It should join automatically.
-2. Ping your robot: `[hubot-name] ping`. It should repond with "PONG" automatically.
+2. Ping your robot: `[hubot-name] doge me`. It should repond with a Doge meme.
 3. Check the cycle times are correct: `[hubot-name] cp`. This should provide the next septicycle checkpoint time localized to your timezone. If it isn't correct, ensure the timezone is correct: `[hubot-name] cycle offset`.
-4. Ensure futurama meme generation works: `Need help why not zoidberg?` should generate a Zoidberg meme.
-5. Ensure meme generation works: `[hubot-name] one does not simple walk into mordor` should generate a Boromir meme.
+4. Ensure meme generation works: `[hubot-name] need help why not zoidberg?` should generate a Zoidberg meme.
